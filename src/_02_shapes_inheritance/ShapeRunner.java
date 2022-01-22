@@ -24,7 +24,7 @@ public class ShapeRunner {
 		Hexagon hex = new Hexagon(225,350,200,Color.RED);
 		hex.setupRobot();
 		hex.draw();
-		
+		eclipse-javadoc:%E2%98%82=Level2-Module2/src%3C_02_shapes_inheritance
 		Triangle tri = new Triangle(325,375,250,Color.GREEN);
 		tri.setupRobot();
 		tri.draw();
