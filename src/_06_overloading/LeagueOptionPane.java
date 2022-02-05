@@ -17,11 +17,21 @@ import javax.swing.JPanel;
  */
 public class LeagueOptionPane {
 	
-	static JFrame frame = new JFrame();
-	static JPanel panel = new JPanel();
-	static JLabel label = new JLabel();
-	static JLabel picture = new JLabel();
-	static JLabel name = new JLabel();
+	 static JFrame frame = new JFrame();
+	 static JPanel panel = new JPanel();
+	 static JLabel label = new JLabel();
+	 static JLabel picture = new JLabel();
+	 static JLabel name = new JLabel();
+	 
+	 public static void setup() {
+		 frame.add(panel);
+		 panel.add(label);
+		 panel.add(picture);
+		 panel.add(name);
+		 
+		 frame.setVisible(true);
+		 frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+	 }
 	
 	public static void showMessageDialog(String message) {
 		// 1. Open example.png and make a GUI that looks like that
@@ -33,12 +43,9 @@ public class LeagueOptionPane {
 		
 		picture.setIcon(loadImage("league.png"));
 		
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		frame.pack();
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.pack();
+		
 	}
 	
 	// 3. Call this method in the Runner class
@@ -49,9 +56,8 @@ public class LeagueOptionPane {
 	label.setText(message);
 	frame.setTitle(title);
 	picture.setIcon(loadImage("league.png"));
-	picture.setIcon(loadImage("league.png"));
-	frame.setVisible(true);
-	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	
+	
 	frame.pack();
 	}
 	// 5. Call this method in the Runner class
@@ -64,13 +70,16 @@ public class LeagueOptionPane {
 	label.setText(message);
 	frame.setTitle(title);
 	name.setText(filename);
+	
+	
+	frame.pack();
 	}
 	// CHALLENGE: 
 		//	1. Create another showMessageDialog() method that lets us choose the Message, Title, Image, and Background Color
 		//     3 String parameters (one for the message, one for the title, and one for the fileName)
-		//	   1 Color parameter for the backgroundColor
-		//			
-		//	2. Change the return type of the 3rd showMessageDialog() method(the one right above) to JPanel
+		//	  arg0 1 Color parameter for the backgroundColor
+		//		arg0arg0arg0arg0arg0arg0arg0arg0	
+		//	2. arg0arg0arg0Change the return type of the 3rd showMessageDialog() method(the one right above) to JPanel
 		//	   Make sure to return your panel at the end of that method
 		//	
 		//	3. Call the showMessageDialog() method you just modified in this method
