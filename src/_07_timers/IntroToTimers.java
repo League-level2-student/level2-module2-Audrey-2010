@@ -1,4 +1,4 @@
-package _07_timers;
+ package _07_timers;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -49,11 +49,11 @@ time=maxTime;
 timer = new Timer(1000/speed, this);
 		// 11. Run it! Notice how it doesn't update? That's because our timer isn't triggering the actionPerformed() method yet!
 		// 12. Make the timer start!
-timer.addActionListener(this);
+timer.start();
 		// 13. Run the program. Is it possible for you to win? 
 		// 14. Figure out how to make it harder or easier! (Which condition is most related to whether you win or not?)
 	}
-
+//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
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// 8. Decrement time
